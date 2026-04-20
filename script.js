@@ -2,7 +2,7 @@
 function bul(numara) {
     const sheetId = "1nHEXQgl52p_Px22QhAEWIU2D2ZPPUUbxV-0NsmwzQRQ";
     const sheetName = encodeURIComponent("Sayfa1");
-    const gq = encodeURIComponent(`SELECT B,C WHERE A = ${numara}`);
+    const gq = encodeURIComponent(`SELECT B,C WHERE A = '${numara}'`);
     const sheetURL = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${sheetName}&tq=${gq}`;
     fetch(sheetURL)
         .then((response) => response.text())
